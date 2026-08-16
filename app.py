@@ -25,7 +25,7 @@ if st.button("Translate",use_container_width=True):
         st.warning("Enter your text first...")
     else:
         try:
-            translated = GoogleTranslator(source=lang[source_lang], traget=lang[target_lang]).translate(text_input)
+            translated = GoogleTranslator(source=lang[source_lang], target=lang[target_lang]).translate(text_input)
             st.text_area("Translated text", value=translated, height=100)
         except:
             st.error("There is an error for connection please try again...")
